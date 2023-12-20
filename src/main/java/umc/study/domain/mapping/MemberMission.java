@@ -18,9 +18,9 @@ public class MemberMission extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.STRING) //열거형 상수의 문자열 표현
     @Column(nullable = false, length = 15 )
-    private MissionStatus status;
+    private MissionStatus status; //열거형 타입의 변수
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
