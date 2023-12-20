@@ -15,8 +15,5 @@ public class TempQueryServiceImpl implements TempQueryService{
             throw new TempHandler(ErrorStatus.TEMP_EXCEPTION);
     }
 
-    @Override
-    public void CheckStatus(Integer status) {
-        if(status ==1)
-    }
+
 }

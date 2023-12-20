@@ -60,6 +60,7 @@ public class Member extends BaseEntity {
 
     //CascadeType.All이란 Member의 변화에 따라 Review,MemberPrefer등의 엔티티가 영향 받음을 의미
     //이렇게 해야, 멤버가 삭제 될 때, 멤버 참조하는 나머지 데이터도 같이 삭제됨
+    //mappedBy- 양방향 매핑에서 연관관계 주인 설정
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
     private List<MemberAgree> memberAgreeList = new ArrayList<>();
 

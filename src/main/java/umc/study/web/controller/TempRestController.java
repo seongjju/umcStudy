@@ -33,12 +33,7 @@ public class TempRestController {
         return ApiResponse.onSuccess(TempConverter.toTempExceptionDTO(flag));
     }
 
-    @GetMapping("/status")
-    public List<Mission> getMissions(@RequestParam(value = "status", required = false) String status) {
-        if (status != null) {
-            MissionStatus missionStatus = MissionStatus.valueOf(status.toUpperCase());
 
-    }
 
 
 }

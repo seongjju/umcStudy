@@ -18,7 +18,7 @@ public class MemberAgree extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // PK 자동으로 생성하도록 하는 애노테이션. 데이터베이스가 자동으로 값을 생성하는 IDENTITY 전략을 사용
     private Long id;
 
-    @ManyToOne(fetch =  FetchType.LAZY) //현재클래스와 Member 클래스 간의 다대일관계 설정
+    @ManyToOne(fetch =  FetchType.LAZY) //현재클래스와 Member 클래스 간의 다일관계 설정
     @JoinColumn(name= "member_id") //외래키 이름 설정
     private Member member;
 
